@@ -9,7 +9,7 @@ import webbrowser
 if __name__ == '__main__':
     pass
 
-entry = input('link puush :')
+entry = input('lien puush :')
 link = entry[14:]
 link = link.split('.')[0]
 idPuush = list()
@@ -19,7 +19,7 @@ for charac in link :
     temp = CharPuush(charac)
     idPuush.append(temp)
 
-while (continu == 'True') :
+while (continu == 1) :
 
     n = int(input("nombre de tour : "))
     
@@ -30,5 +30,6 @@ while (continu == 'True') :
         
         temp = "".join(x.getValue() for x in idPuush)
         webbrowser.open_new('http://puu.sh/'+temp)
-    continu = input("Continuer ? : ")
+    input("Continuer ? : ")
+    continu = input("1. pour continuer")
     print(continu)
