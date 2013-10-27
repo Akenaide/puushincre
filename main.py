@@ -18,7 +18,7 @@ continu = 'True'
 for charac in link :
     temp = CharPuush(charac)
     idPuush.append(temp)
-
+    
 while (continu == 1) :
 
     n = int(input("nombre de tour : "))
