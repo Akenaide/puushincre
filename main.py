@@ -1,8 +1,8 @@
-'''
+"""
 Created on 7 août 2013
 
 @author: KMS
-'''
+"""
 from CharPuush import CharPuush
 import webbrowser
 
@@ -15,20 +15,20 @@ link = link.split('.')[0]
 idPuush = list()
 continu = 'True'
 
-for charac in link :
+for charac in link:
     temp = CharPuush(charac)
     idPuush.append(temp)
     
-while (continu == 1) :
+while continu == 1:
 
     n = int(input("nombre de tour : "))
     
-    for i in range(0,n):
+    for i in range(0, n):
         i = 1
-        while (idPuush[-i].incre()):
+        while idPuush[-i].incre():
             i += 1
         
-        temp = "".join(x.getValue() for x in idPuush)
+        temp = "".join(x.get_value() for x in idPuush)
         webbrowser.open_new('http://puu.sh/'+temp)
     input("Continuer ? : ")
     continu = input("1. pour continuer")
