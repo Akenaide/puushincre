@@ -20,6 +20,7 @@ for charac in link:
     idPuush.append(temp)
     
 while continu == 1:
+    parser = myparser()
 
     n = int(input("nombre de tour : "))
     
@@ -33,3 +34,13 @@ while continu == 1:
     input("Continuer ? : ")
     continu = input("1. pour continuer")
     print(continu)
+
+
+def myparser():
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Puush increment')
+    parser.add_argument('--link', help='beginning of increment')
+    parser.add_argument('number', help='number of link', type=int)
+
+    return parser.parse_args()

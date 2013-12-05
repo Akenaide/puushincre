@@ -9,14 +9,14 @@ class CharPuush():
     """
     classdocs
     """
-    index = 0
-    listChar = list(string.ascii_letters)
-    listChar.extend(string.digits)
-    
+
     def __init__(self, char):
         """
-        Constructor
+        param : char : a character alphanumeric
+
         """
+        self.listChar = list(string.ascii_letters)
+        self.listChar.extend(string.digits)
         self.index = self.listChar.index(char)
 
     def incre (self):
