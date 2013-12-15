@@ -1,5 +1,5 @@
 """
-Created on 7 août 2013
+Created on 7 August 2013
 
 @author: KMS
 """
@@ -24,25 +24,31 @@ def main():
     link = entry[14:]
     link = link.split('.')[0]
     idPuush = list()
-    continu = 1
+    continu = True
 
     for charac in link:
         temp = CharPuush(charac)
         idPuush.append(temp)
 
-    while continu == 1:
+    while continu:
         #n = int(input("nombre de tour : "))
         number_iteration = args.number
         i = 0
         while i < number_iteration:
             rank = 1
-
             while idPuush[-rank].incre():
                 rank += 1
+            i += 1
 
             temp = "".join(x.get_value() for x in idPuush)
             webbrowser.open_new('http://puu.sh/'+temp)
-        continu = int(input("1. pour continuer"))
+        continu = input("1. pour continuer : ")
+
+        if continu == "1":
+            continu = True
+        else:
+            continu = False
+
 
 if __name__ == '__main__':
     main()

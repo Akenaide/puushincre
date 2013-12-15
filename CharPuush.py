@@ -1,5 +1,5 @@
 """
-Created on 7 août 2013
+Created on 7 August 2013
 
 @author: KMS
 """
